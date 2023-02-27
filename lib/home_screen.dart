@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Card(
               child: ListTile(
-                title: Text("useEffect"),
+                title: Text("useEffect / useTextEditingController / useFuture"),
                 onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
