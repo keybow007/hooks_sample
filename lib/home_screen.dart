@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_sample/hooks/use_animation.dart';
 import 'package:hooks_sample/hooks/use_effect.dart';
 import 'package:hooks_sample/hooks/use_state.dart';
 import 'package:hooks_sample/hooks/use_stream.dart';
+import 'package:hooks_sample/no_hooks/use_animation.dart';
 import 'package:hooks_sample/no_hooks/use_effect.dart';
 import 'package:hooks_sample/no_hooks/use_state.dart';
 import 'package:hooks_sample/no_hooks/use_stream.dart';
@@ -70,6 +72,19 @@ class _HomeScreenState extends State<HomeScreen> {
                     builder: (_) => (_isUseHooks)
                         ? UseStreamHooksScreen()
                         : UseStreamNoHooksScreen(),
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                title: Text("useAnimationController"),
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => (_isUseHooks)
+                        ? UseAnimationHooksScreen()
+                        : UseAnimationNoHooksScreen(),
                   ),
                 ),
               ),
